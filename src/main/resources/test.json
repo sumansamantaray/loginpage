@@ -1,0 +1,493 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"description": "description",
+		"version": "2.0",
+		"title": "Login Page",
+		"termsOfService": "URL",
+		"contact": {
+			"name": "Suman Samantaray",
+			"url": "http://www.loginpage.com",
+			"email": "suman.samantaray@suman.com"
+		},
+		"license": {
+			"name": "Apache 2.0",
+			"url": "http://www.apache.org/licenses/LICENSE-2.0"
+		}
+	},
+	"host": "localhost:8080",
+	"basePath": "/",
+	"tags": [
+		{
+			"name": "basic-error-controller",
+			"description": "Basic Error Controller"
+		},
+		{
+			"name": "login-controller",
+			"description": "Login Controller"
+		},
+		{
+			"name": "todo-list-controller",
+			"description": "Todo List Controller"
+		}
+	],
+	"consumes": [
+		"application/xml",
+		"application/json"
+	],
+	"produces": [
+		"application/xml",
+		"application/json"
+	],
+	"paths": {
+		"/error": {
+			"get": {
+				"tags": [
+					"basic-error-controller"
+				],
+				"summary": "error",
+				"operationId": "errorUsingGET",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "object",
+							"additionalProperties": {
+								"type": "object"
+							}
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"deprecated": false
+			},
+			"head": {
+				"tags": [
+					"basic-error-controller"
+				],
+				"summary": "error",
+				"operationId": "errorUsingHEAD",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "object",
+							"additionalProperties": {
+								"type": "object"
+							}
+						}
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				},
+				"deprecated": false
+			},
+			"post": {
+				"tags": [
+					"basic-error-controller"
+				],
+				"summary": "error",
+				"operationId": "errorUsingPOST",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "object",
+							"additionalProperties": {
+								"type": "object"
+							}
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"deprecated": false
+			},
+			"put": {
+				"tags": [
+					"basic-error-controller"
+				],
+				"summary": "error",
+				"operationId": "errorUsingPUT",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "object",
+							"additionalProperties": {
+								"type": "object"
+							}
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"deprecated": false
+			},
+			"delete": {
+				"tags": [
+					"basic-error-controller"
+				],
+				"summary": "error",
+				"operationId": "errorUsingDELETE",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "object",
+							"additionalProperties": {
+								"type": "object"
+							}
+						}
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				},
+				"deprecated": false
+			},
+			"options": {
+				"tags": [
+					"basic-error-controller"
+				],
+				"summary": "error",
+				"operationId": "errorUsingOPTIONS",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "object",
+							"additionalProperties": {
+								"type": "object"
+							}
+						}
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				},
+				"deprecated": false
+			},
+			"patch": {
+				"tags": [
+					"basic-error-controller"
+				],
+				"summary": "error",
+				"operationId": "errorUsingPATCH",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "object",
+							"additionalProperties": {
+								"type": "object"
+							}
+						}
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/login": {
+			"get": {
+				"tags": [
+					"login-controller"
+				],
+				"summary": "showLoginPage",
+				"operationId": "showLoginPageUsingGET",
+				"parameters": [
+					{
+						"name": "inputModel",
+						"in": "query",
+						"description": "inputModel",
+						"required": false,
+						"items": {
+							"type": "object",
+							"additionalProperties": {
+								"type": "object"
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"deprecated": false
+			},
+			"post": {
+				"tags": [
+					"login-controller"
+				],
+				"summary": "showWelcomePage",
+				"operationId": "showWelcomePageUsingPOST",
+				"parameters": [
+					{
+						"name": "model",
+						"in": "query",
+						"description": "model",
+						"required": false,
+						"items": {
+							"type": "object",
+							"additionalProperties": {
+								"type": "object"
+							}
+						}
+					},
+					{
+						"name": "name",
+						"in": "query",
+						"description": "name",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "password",
+						"in": "query",
+						"description": "password",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/todo-list": {
+			"get": {
+				"tags": [
+					"todo-list-controller"
+				],
+				"summary": "todoTaskList",
+				"operationId": "todoTaskListUsingGET",
+				"parameters": [
+					{
+						"name": "model",
+						"in": "query",
+						"description": "model",
+						"required": false,
+						"items": {
+							"type": "object",
+							"additionalProperties": {
+								"type": "object"
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				},
+				"deprecated": false
+			}
+		}
+	},
+	"definitions": {
+		"ModelAndView": {
+			"type": "object",
+			"properties": {
+				"empty": {
+					"type": "boolean"
+				},
+				"model": {
+					"type": "object"
+				},
+				"modelMap": {
+					"type": "object",
+					"additionalProperties": {
+						"type": "object"
+					}
+				},
+				"reference": {
+					"type": "boolean"
+				},
+				"status": {
+					"type": "string",
+					"enum": [
+						"100",
+						"101",
+						"102",
+						"103",
+						"200",
+						"201",
+						"202",
+						"203",
+						"204",
+						"205",
+						"206",
+						"207",
+						"208",
+						"226",
+						"300",
+						"301",
+						"302",
+						"303",
+						"304",
+						"305",
+						"307",
+						"308",
+						"400",
+						"401",
+						"402",
+						"403",
+						"404",
+						"405",
+						"406",
+						"407",
+						"408",
+						"409",
+						"410",
+						"411",
+						"412",
+						"413",
+						"414",
+						"415",
+						"416",
+						"417",
+						"418",
+						"419",
+						"420",
+						"421",
+						"422",
+						"423",
+						"424",
+						"426",
+						"428",
+						"429",
+						"431",
+						"451",
+						"500",
+						"501",
+						"502",
+						"503",
+						"504",
+						"505",
+						"506",
+						"507",
+						"508",
+						"509",
+						"510",
+						"511"
+					]
+				},
+				"view": {
+					"$ref": "#/definitions/View"
+				},
+				"viewName": {
+					"type": "string"
+				}
+			},
+			"title": "ModelAndView"
+		},
+		"View": {
+			"type": "object",
+			"properties": {
+				"contentType": {
+					"type": "string"
+				}
+			},
+			"title": "View"
+		}
+	}
+}
